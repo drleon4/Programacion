@@ -48,7 +48,7 @@ public class Ejecutor {
         
         i = 1;
         for (Prestamo pre2 : pres2) {
-            System.out.printf("\n\tPRESTAMO EDUCATIVO [%d]: \n\n%sTotal intereses: %.2f\n",i, pre2, pre2.total_vehiculo());
+            System.out.printf("\n\tPRESTAMO EDUCATIVO [%d]: \n\n%s",i, pre2);
             i++;
         }
     }
