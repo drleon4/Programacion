@@ -47,6 +47,6 @@ public class PrestamoAutomovil extends Prestamo {
 
     @Override
     public String toString(){
-        return String.format( "%s\nTipo vehículo: %d\nMarca Vehículo: %s\nGarante 2: %s",super.toString(), getTipoVehiculo(), getMarcaVehiculo(), getGarante2());
+        return String.format( "%s\nTipo vehículo: %d\nMarca Vehículo: %s\n -> Garante 2: %s\n",super.toString(), getTipoVehiculo(), getMarcaVehiculo(), getGarante2().toString());
     }
 }

@@ -13,37 +13,43 @@ import java.util.Scanner;
  */
 public class Ejecutor {
     public static void main(String[] args) {
-        Scanner a = new Scanner(System.in);
         
         
-        for (int i = 0; i < 2; i++) {
-            System.out.println("Ingrese Nombre: ");
-            String nom[] = new String [i];
-            nom[i] = a.nextLine();
-            System.out.println("Ingrese monto Sueldo: ");
-            double s [] = new double [i];
-            s[i] = a.nextDouble();
-            System.out.println("Ingrese monto de prestamo: ");
-            double monto [] = new double [i];
-            monto [i] = a.nextDouble();
-            System.out.println("Ingrese valor de intereses");
-            double inte [] = new double [i];
-            inte[i] = a.nextDouble();
-            System.out.println("Ingrese Tiempo de prestamo: ");
-            int tiempo [] = new int [i];
-            tiempo [i] = a.nextInt();
-            System.out.println("Ingrese Tipo Vehiculo: ");
-            int tipo [] = new int [i];
-            tipo[i] = a.nextInt();
-            System.out.println("Ingrese marca de Vehiculo: ");
-            String marca = a.nextLine();
-            PrestamoAutomovil p1 = new PrestamoAutomovil(nom[0], s, monto[0], inte[0], tiempo[0], tipo[0],g1 , marca, g2);
-            PrestamoAutomovil p2 = new PrestamoAutomovil(nom[0], s, monto[1], inte[1], tiempo[1], tipo[1], g1, 0, mV, g2);
+        Garante g1 = new Garante("Luis", "Alvarez", 135);
+        Garante g2 = new Garante("Enrique", "Peñanieto", 890);
+        Garante g3 = new Garante("Michael", "Ramon", 420);
+        
+        PrestamoAutomovil p1 = new PrestamoAutomovil("Danilo", 450, 250, 20, 10, g1, 4, "Chevrolet", g2);
+        PrestamoAutomovil p2 = new PrestamoAutomovil("Marco", 560, 320, 56, 13, g1, 6, "Mazda", g2);
+        
+        PrestamoEducativo e1 = new PrestamoEducativo("Maria", 230, 230, 15, 20, g1, 4, "CAMPUS", g2, g3);
+        PrestamoEducativo e2 = new PrestamoEducativo("Stefania", 4621, 452, 10, 30, g1, 3, "SANTJORDI", g2, g3);
+        PrestamoEducativo e3 = new PrestamoEducativo("Daniela", 364, 560, 12, 5, g1, 4, "LA GARITA", g2, g3);
+        
+        Prestamo pres1 [] = new Prestamo[2];
+        
+        pres1 [0] = p1;
+        pres1 [1] = p2;
+        
+        
+        Prestamo pres2 [] = new Prestamo[3];
+        
+        pres2 [0] = e1;
+        pres2 [1] = e2;
+        pres2 [2] = e3;
+        
+        int i = 1;
+        for (Prestamo pre1 : pres1) {
+            System.out.printf("\n\tPRESTAMO AUTOMOVIL [%d]: \n\n%sTotal intereses: %.2f\n",i, pre1, pre1.total_vehiculo());
+            i++;
         }
         
+        System.out.println("\n\n*****************************************************");
         
-        PrestamoEducativo e1 = new PrestamoEducativo(nom, 0, 0, 0, 0, g1, 0, nC, g2, g3);
-        PrestamoEducativo e2 = new PrestamoEducativo(nom, 0, 0, 0, 0, g1, 0, nC, g2, g3);
-        PrestamoEducativo e3 = new PrestamoEducativo(nom, 0, 0, 0, 0, g1, 0, nC, g2, g3);
+        i = 1;
+        for (Prestamo pre2 : pres2) {
+            System.out.printf("\n\tPRESTAMO EDUCATIVO [%d]: \n\n%sTotal intereses: %.2f\n",i, pre2, pre2.total_vehiculo());
+            i++;
+        }
     }
 }

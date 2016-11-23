@@ -75,14 +75,13 @@ public class Prestamo {
     }
     
     
-    public double total (){
-        return (getMontoPrestamo() * getInteres());
+    public double total_vehiculo (){
+        return (getMontoPrestamo() * getInteres())/100;
     }
     
     @Override
     public String toString(){
-        return String.format("%s\nNombre del Beneficiario: %s\nSueldo: %.2f\nMonto Prestamo: "
-                + "%.2f\nIntereses: %.2d\nTiempo Prestamo: %d\nGarante 1: %s",super.toString(), getNombreDeBeneficiario(), getSueldo(), getMontoPrestamo(),
+        return String.format("Nombre del Beneficiario(a): %s\nSueldo: %.2f\nMonto Prestamo: %.2f\nIntereses: %.2f\nTiempo Prestamo: %d\n -> Garante 1: %s", getNombreDeBeneficiario(), getSueldo(), getMontoPrestamo(),
                 getInteres(), getTiempoPrestamo(), getGarante1().toString());
     }
     

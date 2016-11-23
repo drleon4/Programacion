@@ -18,6 +18,7 @@ public class PrestamoEducativo extends Prestamo {
     public PrestamoEducativo(String nom, double s, double m, double in, int t, Garante g1, int nE, String nC, Garante g2, Garante g3){
         super(nom, s, m, in, t, g1);
         setNevelEstudio(nE);
+        setNombreCentro(nC);
         setGarante2(g2);
         setGarante3(g3);
     }
@@ -57,6 +58,6 @@ public class PrestamoEducativo extends Prestamo {
     
     @Override
     public String toString(){
-        return String.format("%s\nNivel Estudio: %d\nNombre del centro: %s\nGarante 2: %s\nGarante 3: %s\n ", super.toString() , getNevelEstudio(), getNombreCentro(), getGarante2().toString(), getGarante3().toString());
+        return String.format("%s\nNivel Estudio: %d\nNombre del centro: %s\n -> Garante 2: %s\n -> Garante 3: %s\n ", super.toString() , getNevelEstudio(), getNombreCentro(), getGarante2().toString(), getGarante3().toString());
     }
 }

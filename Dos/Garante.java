@@ -46,6 +46,6 @@ public class Garante {
     
     @Override 
     public String toString(){
-        return String.format("Nombre G: %s\nApellido G: %s\nSueldo G: %.2f\n", getNombre(), getApellido(), getSueldo());
+        return String.format("\nNombre Garante: %s\nApellido Garante: %s\nSueldo Garante: %.2f", getNombre(), getApellido(), getSueldo());
     }
 }
