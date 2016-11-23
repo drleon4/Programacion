@@ -46,6 +46,6 @@ public class Docente {
     
     @Override
     public String toString(){
-        return String.format("Nombre D: %s\nApellido D: %s\nTitulo D: %s",getNombre(), getApellido(), getTitulo());
+        return String.format("\n\tDATOS DEL DOCENTE\nNombre D: %s\nApellido D: %s\nTitulo D: %s",getNombre(), getApellido(), getTitulo());
     }
 }

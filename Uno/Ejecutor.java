@@ -21,26 +21,29 @@ public class Ejecutor {
             String nom = a.nextLine();
             System.out.println("Ingrese Apelldio Alum: ");
             String ap = a.nextLine();
-            System.out.println("Ingrese Docente Progrmacion: ");
+            
+            System.out.println("****************************************");
+            System.out.println("Ingrese Nombre Docente Progrmacion: ");
             String dp = a.nextLine();
-            System.out.println("Ingrese Docente Base de datos: ");
-            String dbd = a.nextLine();
-            
-            Alumno al = new Alumno(nom, ap , dp, dbd);
-            
-            System.out.println("*********************************");
-            System.out.println("Ingrese nombre docente: ");
-            String nd = a.nextLine();
-            System.out.println("Ingrese apellido docente: ");
+            System.out.println("Ingrese apellido docente P: ");
             String apd = a.nextLine();
-            System.out.println("Ingrese Titulo docente: ");
+            System.out.println("Ingrese Titulo docente P: ");
             String titulo = a.nextLine();
-            Docente d = new Docente(nd, apd, titulo);
+            Docente d = new Docente(dp, apd, titulo);
             
-            System.out.println(al);
-            System.out.println(d);
+            System.out.println("****************************************");
+            System.out.println("Ingrese nombre docente Base de Datos: ");
+            String nd = a.nextLine();
+            System.out.println("Ingrese apellido docente P: ");
+            String apdB = a.nextLine();
+            System.out.println("Ingrese Titulo docente P: ");
+            String tituloB = a.nextLine();
+            Docente d1 = new Docente(nd, apdB, tituloB);
             
-            System.out.println("Desea ingresar mas alumnos ?\n1) SI - 2) NO");
+            Alumno al = new Alumno(nom, ap , d, d1);
+            System.out.printf("%s\n",al);
+            
+            System.out.println("\nDesea ingresar mas alumnos ?\n1) SI - 2) NO");
             num = a.nextInt();
             a.nextLine();
         } while ( num != 2);

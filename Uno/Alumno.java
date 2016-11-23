@@ -54,9 +54,9 @@ public class Alumno {
         docente_base_datos = docente_base;
     }
     
-    
-    public String ToString(){
-        return String.format("Nombre: %s\nApellido: %s\nDocente Pro: %s\nDocente Base: %s", getNombre(), getApellido(), getDocente_progrmacion().getNombre(), getDocente_base_datos().getNombre());
+    @Override
+    public String toString(){
+        return String.format("\n\t****************\n\tDATOS DEL ALUMNO\nNombre: %s\nApellido: %s\nDocente PROGRAMACION: %s\nDocente BASE DE DATOS: %s", getNombre(), getApellido(), getDocente_progrmacion().toString(), getDocente_base_datos().toString());
     }
     
 }
